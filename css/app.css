@@ -28,14 +28,14 @@ body, main {
     position: absolute;
     top: 0;
     left: 0;
-    background: url('/images/bg-pattern-top-mobile.svg') no-repeat;
+    background: url('https://estivenmayhuay.github.io/social-proof/images/bg-pattern-top-mobile.svg') no-repeat;
 }
 
 .bg--bottom {
     position: absolute;
     bottom: 0;
     right: 0;
-    background: url('/images/bg-pattern-bottom-mobile.svg') no-repeat;
+    background: url('https://estivenmayhuay.github.io/social-proof/images/bg-pattern-bottom-mobile.svg') no-repeat;
 }
 
 .bg {
@@ -161,11 +161,11 @@ body, main {
     }
 
     .bg--top {
-        background: url('/images/bg-pattern-top-desktop.svg');
+        background: url('https://estivenmayhuay.github.io/social-proof/images/bg-pattern-top-desktop.svg');
     }
 
     .bg--bottom {
-        background: url('/images/bg-pattern-bottom-desktop.svg');
+        background: url('https://estivenmayhuay.github.io/social-proof/images/bg-pattern-bottom-desktop.svg');
     }
 
     .header {
