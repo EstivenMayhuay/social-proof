@@ -2,7 +2,234 @@
     --very-dark-magenta: hsl(300, 43%, 22%);
     --soft-pink: hsl(333, 80%, 97%);
 
+    --pink: #AF5A93;
+
     --dark-grayish-magenta: hsl(303, 10%, 53%);
     --light-grayish-magenta: hsl(300, 24%, 96%);
     --white: hsl(0, 0%, 100%);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'League Spartan', sans-serif;
+}
+
+body, main {
+    position: relative;
+    display: block;
+    width: 100%;
+    height: 100%;
+    min-height: 100vh;
+}
+
+.bg--top {
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: url('/images/bg-pattern-top-mobile.svg') no-repeat;
+}
+
+.bg--bottom {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    background: url('/images/bg-pattern-bottom-mobile.svg') no-repeat;
+}
+
+.bg {
+    width: 100%;
+    height: 200px;
+    background-position: top left;
+    background-size: cover;
+    z-index: -10;
+}
+
+.header {
+    display: flex;
+    flex-direction: column;
+    row-gap: 1.5rem;
+    color: var(--very-dark-magenta);
+    font-weight: 800;
+    padding: 2rem 1rem;
+}
+
+.header h1 {
+    text-align: center;
+    font-size: 2.5rem;
+}
+
+.header p {
+    font-size: 1.2rem;
+    font-weight: 500;
+    text-align: center;
+    line-height: 1.6rem;
+    color: var(--dark-grayish-magenta);
+}
+
+.rankings {
+    display: flex;
+    flex-direction: column;
+    row-gap: 1.25rem;
+    padding: 2rem 1rem;
+}
+
+.ranking {
+    display: flex;
+    flex-direction: column;
+    row-gap: 1rem;
+    background-color: var(--light-grayish-magenta);
+    padding: 1rem;
+    border-radius: 6px;
+}
+
+.ranking__stars {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    column-gap: 1rem;
+}
+
+.ranking__stars i {
+    color: orange;
+}
+
+.ranking__title {
+    color: var(--very-dark-magenta);
+    text-align: center;
+    font-size: 1rem;
+}
+
+.comments {
+    display: flex;
+    flex-direction: column;
+    row-gap: 1.25rem;
+    padding: 2rem 1rem;
+
+}
+
+.comment {
+    background-color: var(--very-dark-magenta);
+    padding: 2rem 1.5rem;
+    border-radius: 0.5rem;
+    height: calc(200px + 2rem);
+}
+
+.comment__person {
+    display: flex;
+    flex-direction: row;
+    column-gap: 1rem;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+
+.comment__person img {
+    border-radius: 50%;
+}
+
+.comment__info {
+    display: flex;
+    flex-direction: column;
+    row-gap: 0.35rem;
+}
+
+.comment__info h2 {
+    color: var(--white);
+    font-size: 1.2rem;
+}
+
+.comment__info span {
+    color: var(--pink);
+    font-size: 1rem;
+    font-weight: 700;
+}
+
+.comment__desc {
+    color: var(--white);
+    font-weight: 500;
+    line-height: 1.5rem;
+    font-size: 0.95rem;
+}
+
+@media screen and (min-width: 768px) {
+    main {
+        display: grid;
+        grid-template-columns: repeat(12, 1fr);
+        grid-template-rows: repeat(2, auto);
+        padding: 3rem;
+    }
+
+    .bg--top {
+        background: url('/images/bg-pattern-top-desktop.svg');
+    }
+
+    .bg--bottom {
+        background: url('/images/bg-pattern-bottom-desktop.svg');
+    }
+
+    .header {
+        grid-column: 1 / 7;
+        grid-row: 1;
+    }
+
+    .rankings {
+        grid-column: 7 / 13;
+        grid-row: 1;
+    }
+
+    .comments {
+        grid-column: 1 / 13;
+        grid-row: 2;
+        flex-direction: row;
+        column-gap: 2rem;
+    }
+
+    .header {
+        justify-content: center;
+    }
+
+    .header h1, .header p {
+        text-align: left;
+    }
+
+    .header h1 {
+        font-size: 3rem;
+    }
+
+    .header p {
+        font-size: 1.1rem;
+    }
+
+    .rankings {
+        padding: 2rem;
+    }
+
+    .ranking {
+        flex-direction: row;
+        align-items: center;
+        column-gap: 2rem;
+    }
+
+    .ranking:nth-child(2) {
+        margin-left: 2rem;
+    }
+
+    .ranking:nth-child(3) {
+        margin-left: 4rem;
+    }
+
+    .comment:nth-child(2) {
+        margin-top: 2rem;
+    }
+
+    .comment:nth-child(3) {
+        margin-top: 4rem;
+    }
+
+    .comment {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
 }
